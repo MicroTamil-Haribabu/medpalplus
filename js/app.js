@@ -9,7 +9,6 @@ $(document).ready(function(){
 
 function sendData(){
     var postData = { name: $('#name').val(), email:$('#email').val(), message:$('#message').val() }
-    console.log(postData);
     $.ajax({
       method: "POST",
       url: "services/contactus.php",
@@ -17,4 +16,7 @@ function sendData(){
     }).done(function( msg ) {
                 console.log( msg );
             });
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
 }
