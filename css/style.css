@@ -194,6 +194,10 @@ height: 40px;}
     line-height: 25px;
 }
 
+.howitworks ul{
+    padding: 0px;
+}
+
 /* footer */
 footer {
     background-color: #151142;
