@@ -1,5 +1,7 @@
 $(document).ready(function(){
+    $('#contacted').hide();
     $("#myform").on('submit', function(e){
+        $('#contacted').hide();
         e.preventDefault();
         sendData();
     });
@@ -15,6 +17,7 @@ function sendData(){
       data: postData
     }).done(function( msg ) {
                 console.log( msg );
+                $('#contacted').show();
             });
     $('#name').val('');
     $('#email').val('');
