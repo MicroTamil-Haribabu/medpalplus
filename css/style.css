@@ -27,7 +27,7 @@ a, a:active, a:focus, a:visited {
 header .navbar {
     margin-bottom: 0;
     background-color: #fff;
-    border-bottom: 3px solid #620c3f;
+    border-bottom: 1px solid #620c3f;
 }
 .navbar-brand img {
     margin-top: -48px;
