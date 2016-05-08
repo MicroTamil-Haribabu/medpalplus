@@ -10,7 +10,11 @@ $email_id = $_POST['email'];
 $name = $_POST['name'];
 $message = strip_tags($_POST['message']);
 
-if(mail('support@medpalplus.com', $name, $message + '<br><br>' + $email)){
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers .= 'From: <webmaster@medpalplus.com>' . "\r\n";
+
+if(mail('support@medpalplus.com', $name, $message + '<br><br>' + $email, $headers)){
     echo 'sent';
 }else{
     echo 'failed';
