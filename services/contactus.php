@@ -1,15 +1,15 @@
 <?php
 
-var_dump($_POST);
+var_dump($_REQUEST);
 
-if(!isset($_POST['email']) ||!isset($_POST['name']) ||!isset($_POST['message']) ){
+if(!isset($_REQUEST['email']) ||!isset($_REQUEST['name']) ||!isset($_REQUEST['message']) ){
     echo 'failed';
     exit(1);
 }
 
-$email_id = $_POST['email'];
-$name = $_POST['name'];
-$message = strip_tags($_POST['message']);
+$email_id = $_REQUEST['email'];
+$name = $_REQUEST['name'];
+$message = strip_tags($_REQUEST['message']);
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
