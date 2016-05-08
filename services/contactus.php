@@ -25,10 +25,10 @@ if(!isset($_REQUEST['email']) ||!isset($_REQUEST['name']) ||!isset($_REQUEST['me
 
 
 $headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
 $headers .= 'From: <'.$email_id.'>' . "\r\n";
 
-if(mail('support@medpalplus.com', $name, $message.'<br><br>'.$name.'<br>('.$email_id.')', $headers)){
+if(mail('support@medpalplus.com', 'Contact : '.$name, $message.'<br><br>'.$name.'<br>('.$email_id.')', $headers)){
     echo 'sent';
 }else{
     echo 'failed';
