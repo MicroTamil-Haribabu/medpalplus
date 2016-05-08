@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_REQUEST);
-
 if(!isset($_REQUEST['email']) ||!isset($_REQUEST['name']) ||!isset($_REQUEST['message']) ){
 
     $postdata = file_get_contents("php://input");
@@ -17,7 +15,7 @@ if(!isset($_REQUEST['email']) ||!isset($_REQUEST['name']) ||!isset($_REQUEST['me
         }
     }else{
         echo 'failed';
-    }
+    } 
   
 }else{
     $email_id = $_REQUEST['email'];
